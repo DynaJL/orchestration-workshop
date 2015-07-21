@@ -24,8 +24,8 @@ hasher:
 
 webui:
     build: webui
-    links:
-      - redis
+    extra_hosts:
+      redis: 54.69.174.180
     ports:
       - "8000:80"
     # volumes:
@@ -40,5 +40,5 @@ worker:
       - rng0:rng
       - hasher
     extra_hosts:
-      redis: 54.69.175.180
+      redis: 54.69.174.180
 
